@@ -12,7 +12,9 @@ This image is meant to be used as the base image for Busybox-based containers. I
 	RUN opkg-install curl bash git
 	CMD ["/bin/bash"]
 
-The above Dockerfile grabs the latest package index during build, installs curl, bash, git, all their dependencies, and then deletes the local package index. The result is a Docker image that's only 10MB. Not too shabby.
+The above Dockerfile grabs the latest package index during build, installs curl, bash, git, all their dependencies, and then deletes the local package index. **The result is a Docker image that's only 10MB.** Not too shabby.
+
+Compare that to a minimal Ubuntu 12.04 (which comes with curl, bash) after installing git: 300MB. 
 
 ## Customizing buildroot configuration (Advanced)
 
