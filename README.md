@@ -1,10 +1,12 @@
-# progrium/busybox
+# busybox
 
-This might not be the smallest Busybox container (4.8MB), but it has [opkg](http://wiki.openwrt.org/doc/techref/opkg), which means you can *very easily* install other [common packages](http://downloads.openwrt.org/snapshots/trunk/x86_64/packages/) while keeping the image footprint size to a minimum.
+This might not be the smallest Busybox container (4.8MB), but it has [opkg](http://wiki.openwrt.org/doc/techref/opkg), which means you can *very easily* install other [common packages](http://downloads.openwrt.org/snapshots/trunk/x86_64/packages/) while keeping the image size to an absolute minimum.
+
+The convenience of `apt-get install` but for Busybox!
 
 ## Using and installing packages
 
-This image is meant to be used as a base image for Busybox-based containers. It includes glibc, uclibc, and opkg with an easy-to-use wrapper for installing packages from your Dockerfiles:
+This image is meant to be used as the base image for Busybox-based containers. It includes glibc, uclibc, and opkg with an easy-to-use wrapper for installing packages from your Dockerfiles:
 
 	FROM progrium/busybox
 	RUN opkg-install curl bash git
