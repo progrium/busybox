@@ -1,5 +1,7 @@
 # busybox
 
+> **Notice:** *This image will probably soon be deprecated in favor of our even smaller [Alpine Linux based image](https://github.com/gliderlabs/docker-alpine). Alpine is a minimal Linux distro designed with containers in mind, based on Busybox, with a real, modern package system*
+
 This might not be the smallest Busybox container (4.8MB), but it has [opkg](http://wiki.openwrt.org/doc/techref/opkg), which means you can *very easily* install other [common packages](http://downloads.openwrt.org/snapshots/trunk/x86_64/generic/packages/packages/) while keeping the image size to an absolute minimum.
 
 The convenience of `apt-get install` but for Busybox!
